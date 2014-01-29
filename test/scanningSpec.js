@@ -11,6 +11,13 @@ describe('scanning', function() {
 		cart = new Checkout();
 	});
 
+	it('can scan in any order', function() {
+		cart.scan('B15');
+		cart.scan('A99');
+		cart.scan('B15');
+		expect(cart.total()).to.equal(95);
+	});
+
 	describe('A99', function() {
 		it('should scan item A99 and add price 50', function() {
 			cart.scan('A99');
