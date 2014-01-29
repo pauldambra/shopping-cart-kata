@@ -1,12 +1,13 @@
 var expect = require('chai').expect;
-var Checkout = require('../checkout.js');
+var Checkout = require('../checkout');
+var offerCalculator = require('../offerCalculator');
 
 describe('scanning', function() {
 	var cart;
 
 	beforeEach(function() {
-		Checkout.addOffer('A99',3,130);
-		Checkout.addOffer('B15',2,45);
+		offerCalculator.addOffer('A99',3,130);
+		offerCalculator.addOffer('B15',2,45);
 		cart = new Checkout();
 	});
 

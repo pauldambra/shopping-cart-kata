@@ -1,15 +1,11 @@
 var expect = require('chai').expect;
-var Checkout = require('../checkout.js');
+var Checkout = require('../checkout');
 
 describe('the shopping cart', function() {
 	var cart;
 
 	beforeEach(function() {
 		cart = new Checkout();
-	});
-
-	it('should have a static add offers function', function() {
-		expect(Checkout.addOffer).to.exist;
 	});
 
 	it('should have a total function', function() {
